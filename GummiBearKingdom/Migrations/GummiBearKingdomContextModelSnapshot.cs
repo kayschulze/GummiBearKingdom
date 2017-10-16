@@ -44,7 +44,7 @@ namespace GummiBearKingdom.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("GummiBearKingdom.Models.Product", b =>

@@ -1,0 +1,19 @@
+﻿@model GummiBearKingdom.Models.Category
+
+@{
+    ViewData["Title"] = "Category - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create a New Category</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Create" class="btn btn-success" />
+}
+
+@Html.ActionLink("Back to Categories List", "Index")

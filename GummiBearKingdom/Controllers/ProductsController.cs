@@ -8,14 +8,14 @@ using GummiBearKingdom.Models;
 
 namespace GummiBearKingdom.Controllers
 {
-    public class ProductsControllers : Controller
+    public class ProductsController : Controller
     {
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View(db.Products.Include(products => products.Category).ToList());
         }
 
         public IActionResult Details(int id)
@@ -26,6 +26,7 @@ namespace GummiBearKingdom.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
             return View();
         }
 
@@ -67,3 +68,4 @@ namespace GummiBearKingdom.Controllers
         }
     }
 }
+

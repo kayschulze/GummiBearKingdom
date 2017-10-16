@@ -1,0 +1,21 @@
+﻿@model GummiBearKingdom.Models.Category
+
+@{
+    ViewData["Title"] = "Category - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Edit</h2>
+<hr />
+
+<h4>Edit this Experience: @Html.DisplayFor(model => model.Name)</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CategoryId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Save" class="btn btn-success" />
+}
+
+@Html.ActionLink("Back to Category List", "Index")

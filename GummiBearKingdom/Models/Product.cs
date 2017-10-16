@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GummiBearKingdom.Models
 {
-    [Table("Product")]
+    [Table("Products")]
 
     public class Product
     {

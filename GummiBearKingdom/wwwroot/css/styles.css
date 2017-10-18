@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.titlebar {
+    background-color: #ff2926;
+    color: white;
+}
+
+img {
+    z-index: 1;
+
+}
+
+.title {
+    color: white;
+    //margin-left: 100px;
+}
+
+
+
+.menubar {
+    background-color: #cc2620;
+}

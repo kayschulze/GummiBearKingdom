@@ -14,7 +14,7 @@ namespace GummiBearKingdom.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySql(@"Server=localhost;Port=3306;database=gummibearkingdomMigrations;uid=root;pwd=root;");
+            options.UseMySql(@"Server=localhost;Port=8889;database=gummibearkingdomMigrations;uid=root;pwd=root;");
         }
 
         public GummiBearKingdomContext(DbContextOptions<GummiBearKingdomContext> options)

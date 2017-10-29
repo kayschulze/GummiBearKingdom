@@ -41,13 +41,15 @@ namespace GummiBearKingdom.Controllers
         public IActionResult Edit(int id)
         {
             var thisProduct = db.Products.FirstOrDefault(product => product.ProductId == id);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
             return View(thisProduct);
         }
 
         [HttpPost]
         public IActionResult Edit(Product product)
         {
-            db.Entry(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            //db.Edit(product);
+            db.Entry(product).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
